@@ -29,12 +29,18 @@ String DataRecu;
 
 String Payload ="{";      // Chaine de caractère qui contiendra le message envoyer de l'objet vers thingsboard
 
+bool StateMoteur = false;
+
 void messageReceived(String &topic, String &payload){
   Serial.print("Received message : ");
   DataRecu = payload.substring(payload.lastIndexOf(":") + 1, payload.indexOf("}") );
   Serial.println(DataRecu);
   Serial.println(payload);
   Serial.println(topic);
+  if(DataRecu == "true")
+    StateMoteur = true;
+  else if(DataRecu == "false")
+    StateMoteur = false;
 }
 
 

@@ -10,8 +10,8 @@
 
 #include "Secrets.h"
 #include <SPI.h>
-#include <WiFi101.h>
-// #include <WIFININA.h>
+//#include <WiFi101.h>
+#include <WIFININA.h>
 #include "wifiStatus.h"
 
 
